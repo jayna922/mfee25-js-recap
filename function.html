@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        let color = "pink";
-        (() =>{
-            switch(color){
-                case "red":
-                console.log("紅色");
-                break;
-            case "blue":
-                console.log("藍色");
-                break;
-            default:
-                console.log("其他顏色");
-            }
-        })(color);
 
-        // let color = "pink";
-        // (() =>{
-        //     if(color=="red"){
-                
-        //         console.log("紅色");
-        //     }else if(color=="blue"){
-        //         console.log("藍色");
-        //     }else{
-        //         console.log("其他顏色");
-        //     }
-        // })(color);
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>函式 Function</title>
+</head>
+
+<body>
+  <script>
+    // 宣告 Function 函式陳述式
+    function add(a, b) {
+      return a + b;
+    }
+    add(1, 2);
+    let aPlusB = add(1, 2);
+    // console.log(aPlusB);
+
+    // 函式運算式 Function Expression
+    var subtract = function (a, b) {
+      return a - b;
+    };
+    subtract(4, 2);
+
+
+    // let aMinusB = subtract(4, 2);
+    // console.log(aMinusB);
+    console.log(subtract(4, 2));
+
+    // 箭頭函式 Arrow Function
+    let multiply = (a, b) => {
+      return a * b;
+    }
+
+    let multiply2 = (a, b) => a * b; // 自帶return
+
+    let print = str => console.log(str);
+    // (str => console.log(str))('hi');
+
+    (str => console.log(str))('hi');
+
+    (function (a, b) {
+      return a / b;
+    })(4, 2);
+
+    ((a, b) => {
+      return a / b;
+    })(4, 2);
+  </script>
 </body>
+
 </html>
